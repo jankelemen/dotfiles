@@ -1,0 +1,290 @@
+stow zsh
+hidtory
+history
+nvim .zshrc
+nvim .zshrc
+dwmblocks &> log
+history
+log 
+cat log
+yay -S pavucontrol
+dwmblocks &> log
+cat log
+yay -S pulseaudio
+dwmblocks &> log
+cagt log
+cat log
+yay -S pulseaudio-alsa
+dwmblocks &> log
+cat log
+cat log
+dwmblocks &> log
+cat log
+dwmblocks
+dwmblocks &
+nvim .xprofile
+git clone https://github.com/torrinfail/dwmblocks.git
+cd dwmblocks
+sudo make clean install
+mkdir .config/redshift
+nvim .config/redshift/redshift.conf
+nvim .config/redshift/redshift.conf
+cd dwmblocks
+ls -l
+cd ..
+man chown
+man chown
+chown -R jan dwmblocks
+sudo chown -R jan dwmblocks
+ls -l
+sudo make clean install
+killall dwmblocks
+dwmblocks 
+yay -S libxft-bgra
+reboot
+nvim .zshrc
+cd dwmblocks
+nvim blocks.h
+cd
+.scripts/touchpad.sh -i
+nvim .config/sxhkd
+git clone https://github.com/torrinfail/dwmblocks.git
+rm -rf dwmblocks
+git clone https://github.com/torrinfail/dwmblocks.git .
+git clone https://github.com/torrinfail/dwmblocks.git .
+git clone https://github.com/torrinfail/dwmblocks.git
+sudo make clean install
+patch -p1 < patches/my_config.diff
+rm -rf dwmblocks
+sudo make clean install
+patch -p1 < patches/my_config.diff
+patch -p1 < patches/my_config.diff
+cd ..
+chown -R jan dwmblocks
+sudo chown -R jan dwmblocks
+cd dwmblocks
+patch -p1 < patches/my_config.diff
+patch -p1 < patches/my_config.diff
+rm blocks.h.orig
+rm blocks.h.rej
+rm blocks.h
+sudo make clean install
+patch -p1 < patches/my_config.diff
+cat blocks.
+cat blocks.h
+sudo patch -p1 < patches/my_config.diff
+sudo patch -R -p1 < patches/my_config.diff
+sudo patch -p1 < patches/my_config.diff
+cat blocks.h
+sudo patch -p1 < patches/my_config.diff
+cat patches/my_config.diff
+sudo patch -p1 < patches/my_config.diff
+cat patches/my_config.diff
+cat blocks.h
+sudo make clean install
+printf a
+killall dwmblocks
+dwmblocks 
+dwmblocks 
+nvim .config/suckless/dwmblocks
+sudo make clean install
+cd .config/suckless/dwmblocks
+sudo make clean install
+killall dwmblocks
+dwmblocks
+cd
+.scripts/touchpad.sh -i
+.scripts/touchpad.sh -i > e
+nvim 2
+nvim e
+nvim .scripts/touchpad.sh
+.config/suckless/dwmblocks
+nvim blocks.h
+sudo make clean install
+killall dwmblocks
+dwmblocks
+dwmblocks
+nvim blocks.h
+dwmblocks
+sudo make clean install
+dwmblocks
+nvim blocks.h
+sudo make clean install
+dwmblocks
+killall dwmblocks
+dwmblocks
+nvim blocks.h
+sudo make clean install
+dwmblocks
+echo ðƒ¿ƒ¶²ï¸ƒ¯
+nvim blocks.h
+sudo make clean install
+dwmblocks
+nvim blocks.h
+sudo make clean install
+xsetroot -name $status\
+
+	xsetroot -name "$(date)"\
+
+yay -S xsetroot
+cd .config/suckless/dwmblocks
+nvim blocks.h
+sudo make clean install
+killall dwmblocks
+dwmblocks
+sudo make clean install
+nvim blocks.h
+sudo make clean install
+dwmblocks
+nvim blocks.h
+sudo make clean install
+dwmblocks
+yay -S unicode-emoji
+lspci -v | grep -A1 -e VGA -e 3D
+yay -Qs xf86
+yay -Rs xf86-input-synaptics
+history -n 100 | grep -i "xf86"
+history -n 1000 | grep -i "xf86"
+history -n 500 | grep -i "xf86"
+history -n 200 | grep -i "xf86"
+history -n 150 | grep -i "xf86"
+history -n 120 | grep -i "xf86"
+yay -Qs xf86
+yay -Rs unicode-emoji
+yay -S ttf-nerd-fonts-symbols
+ fc-list
+ fc-list | grep emoji
+ fc-list | grep -i "emoji"
+ fc-list | grep -i "nerd"
+yay -Rs ttf-nerd-fonts-symbols
+yay -S nerd-fonts-complete
+yay -S nerd-fonts-complete
+ fc-list | grep -i "JoyPixels"
+ fc-list | grep -i "emoji"
+yay -Qs noto
+yay -Rs noto-*
+yay -Rs noto-fonts noto-fonts-cjk noto-fonts-emoji
+reboot
+yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
+cd .config/suckless/dwmblocks
+nvim blocks.h
+sudo make clean install
+yay -S 	xfce4-taskmanager
+yay
+yay -Rs nerd-fonts-complete
+cd .config/suckless/dwmblocks
+nvim blocks.h
+nvim blocks.h
+sudo make clean install
+yay -S 	ttf-joypixels
+nvim .config/suckless/dwm
+cd .config/suckless/dwm
+sudo make clean install
+echo ðƒ¿ƒ¶²ï¸ƒ¯
+cd .config/suckless/dwm
+cd ../dwmblocks
+nvim blocks.h
+sudo make clean install
+cd .config/suckless/dwm
+nvim config.
+nvim config.h
+sudo make clean install
+history -n 120 | grep -i "yay -S"
+yay -Rs ttf-joypixels
+cd .config/suckless/dwmblocks
+nvim config.h
+nvim blocks.h
+cd .config/suckless/dwmblocks
+nvim blocks.h
+sudo make clean install
+cd .config/suckless/dwmblocks
+nvim blocks.h
+sudo make clean install
+nvim blocks.h
+sudo make clean install
+nvim blocks.h
+sudo make clean install
+yay -S ttf-twemoji
+fc
+fc-list
+fc-list | grep -i "emoji"
+cd .config/suckless/dwm
+nvim config.h
+sudo make clean install
+yay -S nerd-fonts-complete
+cd .config/suckless/dwmblocks
+nvim blocks.h
+cd .config/suckless/dwmblocks
+sudo make clean install
+killall dwmblocks
+dwmblocks
+nvim blocks.h
+sudo make clean install
+cd ../dwm
+nvim config.h
+sudo make clean install
+cd .config/suckless/dwmblocks
+nvim blocks.h
+sudo make clean install
+killall dwmblocks
+dwmblocks
+history -n 120 | grep -i "yay -S"
+yay -Rs nerd-fonts-complete ttf-twemoji
+yay -S nerd-fonts-complete
+cd .config/suckless/dwmblocks
+nvim blocks.h
+sudo make clean install
+cd .config/suckless/dwmblocks
+nvim blocks.h
+yay -S qbittorrent
+sudo nvim /etc/X11/xorg.conf.d/30-touchpad.conf
+cat .scripts/after_suspend.sh
+yay -S xsecurelock
+sudo nvim /etc/systemd/system/resume@.service
+sudo systemctl daemon-reload
+sudo systemctl enable resume@${USER}.service
+sudo systemctl enable fstrim.timer
+sudo systemctl enable fstrim.timer
+sudo nvim /etc/systemd/logind.conf
+yay -S acpid
+sudo systemctl enable acpid
+sudo nvim /etc/acpi/events/jack
+sudo nvim /etc/acpi/events/power
+yay -S tlp
+systemctl status tlp
+cat .scripts/dmenu_power.sh
+yay -Ss x86
+yay -Ss touchpad
+yay -Ss xf86
+yay -Qs xf86
+timedatectl status
+yay -S lf
+lf
+yay -S elvish
+elvish
+yay -Rs elvish
+ln -s /bin/sh
+ls -s /bin/sh
+cat .scripts/dmenu_power.sh
+sudo ln -sfT dash /usr/bin/sh\
+sudo ln -sfT dash /usr/bin/sh
+ls -s /bin/sh
+ls -s /usr/bin/sh
+ls -a /usr/bin/sh
+ls -l /usr/bin/sh
+ls -l bin/sh
+ls -l /bin/sh
+ls .local/share/applications/
+[200~cp /usr/share/applications/nvim.desktop ~/.local/share/applications/
+cp /usr/share/applications/nvim.desktop ~/.local/share/applications/\
+
+ .local/share/applications/
+ls
+nvim nvim.desktop
+stow *
+man stow
+stow *
+rm .config/greenclip.toml
+rm ~/.config/greenclip.toml
+rm ~/.config/redshift/redshift.conf
+stow *

@@ -1,0 +1,48 @@
+XF86Audio{Raise,Lower}Volume
+	amixer -D pulse set Master 5%{+,-} && pkill -RTMIN+2 dwmblocks
+XF86AudioMute
+	amixer -D pulse set Master toggle && pkill -RTMIN+2 dwmblocks
+XF86AudioMicMute
+	amixer -D pulse set Capture toggle && pkill -RTMIN+3 dwmblocks
+
+
+XF86MonBrightnessUp
+	light -A 5 && pkill -RTMIN+1 dwmblocks
+XF86MonBrightnessDown
+	light -U 5 && pkill -RTMIN+1 dwmblocks
+
+
+super + shift + Return 
+	kitty
+
+super + w
+	google-chrome-stable
+
+super + e
+	thunar
+
+super + a
+	rofi -modi drun,run -show drun -show-icons -icon-theme Papirus
+
+super + n
+	systemctl suspend
+
+super + c
+	code
+
+super + space
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+super + Shift_R 
+	~/.scripts/touchpad.sh && pkill -RTMIN+6 dwmblocks
+
+
+super + F1
+	xkblayout-state set 0 && pkill -RTMIN+4 dwmblocks
+
+super + F2
+	xkblayout-state set 1 && pkill -RTMIN+4 dwmblocks
+
+
+XF86PowerOff
+	~/.scripts/dmenu_power.sh

@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# increase key speed via a rate change
+xset r rate 300 50
+
+# sxhkd can't read enviromental variables (coz dwm autostart patch)
+# export TERMINAL="alacritty"
+# export BROWSER="google-chrome-stable"
+
+# keyboard layouts
+setxkbmap -layout us,sk -variant ,qwerty
+
+greenclip daemon &
+
+sxhkd &
+
+picom &
+
+volctl &
+
+dunst &
+
+flameshot &
+
+redshift-gtk &
+
+dwmblocks &
+
+# no dimming
+xset s off
+xset s noblank
+xset -dpms
