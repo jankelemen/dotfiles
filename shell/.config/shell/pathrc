@@ -1,5 +1,6 @@
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.binaries:$PATH"
 
 export SPOTIPY_CLIENT_ID='c9476a93c4284440ac96ef19546cabb4'
 export SPOTIPY_CLIENT_SECRET='6e016dca1e684239afffb630e78bc049'
