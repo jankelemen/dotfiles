@@ -27,8 +27,8 @@ super + a
 super + n
 	systemctl suspend
 
-super + c
-	code
+super + p
+	kitty python3
 
 super + space
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
