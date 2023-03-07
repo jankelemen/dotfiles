@@ -1,0 +1,54 @@
+#! /bin/sh
+
+# startup stuff
+
+picom -b
+sxhkd &
+~/.fehbg &
+#export PATH="$HOME/.local/bin:$PATH"
+#xrandr-extend primary
+#xrandr-extend vga
+#xrdb -merge ~/.Xresources
+#xlayoutdisplay -p eDP-1 -o DP-4 --dpi 100 -o eDP-1 --dpi 180
+#xrandr --output eDP-1 --auto --output DP-4 --auto --scale 2x2 --right-of eDP-1
+
+#killall -q polybar
+#polybar mybar 2>&1 | tee -a /tmp/polybar.log & disown
+
+
+INTERNAL_MONITOR="eDP-1"
+EXTERNAL_MONITOR="DP-4"
+
+
+# Kill and relaunch polybar
+killall -q polybar
+while pgrep -u $UID -x polybar > /dev/null; do sleep 2; done
+if [[ $(xrandr -q | grep "${EXTERNAL_MONITOR} connected") ]]; then
+  MONITOR='eDP-1' polybar --reload mybar -c ~/.config/polybar/config.ini </dev/null >/var/tmp/polybar-primary.log 2>&1 200>&- &
+  MONITOR='DP-4' polybar --reload mybar2 -c ~/.config/polybar/config.ini </dev/null >/var/tmp/polybar-secondary.log 2>&1 200>&- &
+else
+  polybar --reload mybar -c ~/.config/polybar/config.ini </dev/null >/var/tmp/polybar-primary.log 2>&1 200>&- &
+fi
+
+
+# bspc
+
+# on first load setup default workspaces
+if [[ $(xrandr -q | grep "${EXTERNAL_MONITOR} connected") ]]; then
+  bspc monitor "$INTERNAL_MONITOR" -d 1 2 3 4 5 
+  bspc monitor "$EXTERNAL_MONITOR" -d 6 7 8 9 10
+  bspc wm -O "$INTERNAL_MONITOR" "$EXTERNAL_MONITOR"
+  #xrandr --output eDP-1 --primary --mode 3456x2160 --pos 0x1080 --output DP-4 --mode 1920x1080 --pos 768x0 
+else
+  bspc monitor "$INTERNAL_MONITOR" -d 1 2 3 4 5 6 7 8 9 10
+fi
+
+bspc config border_width         3
+bspc config window_gap           0
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config focused_border_color "#E84F4F"
+
+bspc config focus_follows_pointer true
