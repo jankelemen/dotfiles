@@ -4,3 +4,9 @@
 [user]
 	email = jan@jankelemen.net
 	name = Jan Kelemen
+
+[url "ssh://git@github.com/"]
+        insteadOf = https://github.com/
+[user]
+	email = jan@jankelemen.net
+	name = Jan Kelemen
