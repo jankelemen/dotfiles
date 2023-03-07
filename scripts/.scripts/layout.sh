@@ -1,1 +1,0 @@
-[[ $(xset -q | grep -A 0 'LED' | cut -c59-67) == 00000000 ]] && printf "%s" EN || printf "%s" SK 
