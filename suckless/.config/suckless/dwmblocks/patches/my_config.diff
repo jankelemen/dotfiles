@@ -1,28 +1,21 @@
-diff --git a/blocks.h b/blocks.h
-index 0928303..9c22d68 100644
---- a/blocks.h
-+++ b/blocks.h
-@@ -1,18 +1,11 @@
+--- blocks.def.h	2020-12-27 21:43:03.000000000 +0100
++++ blocks.h	2021-09-15 11:50:20.060761035 +0200
+@@ -1,9 +1,15 @@
  //Modify this file to change what commands output to your statusbar, and recompile using the make command.
  static const Block blocks[] = {
--        /*Icon*/        /*Command*/             /*Update Interval*/     /*Update Signal*/
-- 
--        {"⌛ ", "date \"+%a %m-%d %I:%M %p\"",                                                                                                                  15,     7},
--        {"🖲️ ", "~/.scripts/touchpad.sh -i",                                                                                                                    0,      6},
--        {"🧠 ", "free -m | awk 'NR==2 {printf \"%.1f\", $7/1000}' && echo GB",                                                                                  2,      8},
--        {"📶 ", "nmcli -t -f NAME connection show --active",                                                                                                    2,      9},
--        {"🔆 ", "printf \"%.0f%s\" \"$(light -G)\" %",                                                                                                          0,      1},
--        {"🔋 ", "printf \"%s%s\" $([ $(cat /sys/class/power_supply/BAT*/status) != \"Discharging\" ] && echo 🗲) $(cat /sys/class/power_supply/BAT*/capacity)%", 55,     5},
--        {"🔈 ", "pamixer --get-volume-human",                                                                                                                   3,      2},
--        {"🎤 ", "amixer -D pulse sget Capture | awk -F\"[][]\" 'BEGIN { RS=\"\" } /Front Left/ { if ($4 == \"off\") { print \"muted\" } else { print $2 } }'",  3,      3},
--        {"",    "xkblayout-state print %s",                                                                                                                     0,      4},
-+	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
-+	{"Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
-+
-+	{"", "date '+%b %d (%a) %I:%M%p'",					5,		0},
+ 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
+-	{"Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
+-
+-	{"", "date '+%b %d (%a) %I:%M%p'",					5,		0},
++	{"⌛ ", "date \"+%a %m-%d %I:%M %p\"",                                                                                                                 	 15,     7},
++	{"🖲 ", "~/.scripts/touchpad.sh -i",															 0,      6},
++	{"🧠 ", "free -m | awk 'NR==2 {printf \"%.1f\", $7/1000}' && echo GB",                                                                                 	 2,      8},
++	{"📶 ", "nmcli -t -f NAME connection show --active",                                                                                                   	 2,      9},
++	{"🔆 ", "printf \"%.0f%s\" \"$(light -G)\" %",                                                                                                         	 0,      1},
++	{"🔋 ", "printf \"%s%s\" $([ $(cat /sys/class/power_supply/BAT*/status) != \"Discharging\" ] && echo 🔌) $(cat /sys/class/power_supply/BAT*/capacity)%", 55,     5},
++	{"🔈 ", "pamixer --get-volume-human",                                                                                                                  	 3,      2},
++	{"🎤 ", "amixer -D pulse sget Capture | awk -F\"[][]\" 'BEGIN { RS=\"\" } /Front Left/ { if ($4 == \"off\") { print \"muted\" } else { print $2 } }'", 	 3,      3},
++	{"",    "xkblayout-state print %s",                                                                                                                    	 0,      4},
  };
-- 
-+
+ 
  //sets delimeter between status commands. NULL character ('\0') means no delimeter.
- static char delim[] = " | ";
- static unsigned int delimLen = 5;

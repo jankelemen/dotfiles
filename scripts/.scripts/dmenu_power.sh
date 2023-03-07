@@ -1,9 +1,9 @@
 #!/bin/sh
 
 case "$(echo "Shutdown\nRestart\nLogout\nSuspend\nLock" | dmenu -i -p "Power:" -l 5)" in
-        Shutdown) exec systemctl poweroff;;
-        Restart) exec systemctl reboot;;
+        Shutdown) systemctl poweroff;;
+        Restart) systemctl reboot;;
         Logout) pkill dwm;;
-        Suspend) exec systemctl suspend;;
-	Lock) exec xsecurelock;;
+        Suspend) systemctl suspend;;
+	Lock) xsecurelock;;
 esac

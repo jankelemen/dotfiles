@@ -1,5 +1,5 @@
 XF86Audio{Raise,Lower}Volume
-	amixer -D pulse set Master 5%{+,-} && pkill -RTMIN+2 dwmblocks
+	amixer -D pulse set Master 1%{+,-} && pkill -RTMIN+2 dwmblocks
 XF86AudioMute
 	amixer -D pulse set Master toggle && pkill -RTMIN+2 dwmblocks
 XF86AudioMicMute
@@ -13,7 +13,10 @@ XF86MonBrightnessDown
 
 
 super + shift + Return 
-	kitty
+	$TERMINAL
+
+super + bracketright
+	flameshot gui
 
 super + w
 	google-chrome-stable
@@ -28,13 +31,18 @@ super + n
 	systemctl suspend
 
 super + p
-	kitty python3
+	$TERMINAL -e python3
 
 super + space
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 super + Shift_R 
 	~/.scripts/touchpad.sh && pkill -RTMIN+6 dwmblocks
+
+super + d 
+	~/.scripts/dialog_menu.sh
+super + u
+	~/e.sh
 
 
 super + F1

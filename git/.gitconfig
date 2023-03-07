@@ -1,0 +1,6 @@
+
+[url "ssh://git@gitlab.bonet.sk/"]
+        insteadOf = https://gitlab.bonet.sk/
+[user]
+	email = jan@jankelemen.net
+	name = Jan Kelemen

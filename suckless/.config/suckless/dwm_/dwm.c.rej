@@ -1,0 +1,38 @@
+--- dwm.c	2019-02-02 04:55:28.000000000 -0800
++++ dwm.c	2019-07-12 11:47:37.726846244 -0700
+@@ -171,12 +179,15 @@ static void detachstack(Client *c);
+ static Monitor *dirtomon(int dir);
+ static void drawbar(Monitor *m);
+ static void drawbars(void);
++static void drawtab(Monitor *m);
++static void drawtabs(void);
+ static void enternotify(XEvent *e);
+ static void expose(XEvent *e);
+ static void focus(Client *c);
+ static void focusin(XEvent *e);
+ static void focusmon(const Arg *arg);
+ static void focusstack(const Arg *arg);
++static void focuswin(const Arg* arg);
+ static int getrootptr(int *x, int *y);
+ static long getstate(Window w);
+ static int gettextprop(Window w, Atom atom, char *text, unsigned int size);
+@@ -214,6 +225,7 @@ static void seturgent(Client *c, int urg
+ static void showhide(Client *c);
+ static void sigchld(int unused);
+ static void spawn(const Arg *arg);
++static void tabmode(const Arg *arg);
+ static void tag(const Arg *arg);
+ static void tagmon(const Arg *arg);
+ static void tile(Monitor *);
+@@ -908,8 +1044,10 @@ expose(XEvent *e)
+ 	Monitor *m;
+ 	XExposeEvent *ev = &e->xexpose;
+ 
+-	if (ev->count == 0 && (m = wintomon(ev->window)))
++	if(ev->count == 0 && (m = wintomon(ev->window))){
+ 		drawbar(m);
++		drawtab(m);
++	}
+ }
+ 
+ void

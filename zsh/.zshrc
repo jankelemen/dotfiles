@@ -6,15 +6,15 @@ stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
 # History in cache directory:
-HISTSIZE=10000000
-SAVEHIST=10000000
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE=~/.cache/zsh/history
 
 # Load aliases and shortcuts if existent.
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
+[ -f "$HOME"/.config/shell/aliasrc ] && source "$HOME"/.config/shell/aliasrc
 
 # Load path variables if existent.
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/pathrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/pathrc"
+[ -f "$HOME"/.config/shell/pathrc ] && source "$HOME"/.config/shell/pathrc
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -50,24 +50,6 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp" >/dev/null
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
-bindkey -s '^o' 'lfcd\n'
-
-bindkey -s '^a' 'bc -lq\n'
-
-bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
-
-bindkey '^[[P' delete-char
-
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
@@ -75,6 +57,14 @@ bindkey '^e' edit-command-line
 # Ctrl kills words
 bindkey '^H' backward-kill-word
 
-# Load syntax highlighting; should be last.
+# Load syntax highlighting
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# mote this to another file
+#export GOPATH=$HOME/go
+#export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
