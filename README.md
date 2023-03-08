@@ -1,1 +1,1 @@
-my dotfiles that I manage with GNU stow 
+my dotfiles that I manage with GNU stow `stow -t ~ */`
